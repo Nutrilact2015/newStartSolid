@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solid Start Date Calculator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Solid Start Date Calculator</h1>
-    <p>Enter your child's date of birth to find out when to start solids (181 days after birth).</p>
-    <form id="dob-form">
-      <label for="dob">Child's Date of Birth:</label>
-      <input type="date" id="dob" required>
-      <button type="submit">Calculate</button>
-    </form>
-    <div id="result" class="hidden">
-      <h2>Recommended Solid Start Date:</h2>
-      <p id="solid-date"></p>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+# Solid Date Calculator
+
+from datetime import datetime, timedelta
+
+def calculate_solid_date(dob):
+    # Convert the date of birth string to a datetime object
+    dob_date = datetime.strptime(dob, "%Y-%m-%d")
+    # Add 180 days to the date of birth
+    solid_date = dob_date + timedelta(days=180)
+    return solid_date.strftime("%Y-%m-%d")
+
+# Example usage
+date_of_birth = "2023-01-01"
+solid_date = calculate_solid_date(date_of_birth)
+print(f"The solid date is: {solid_date}")
