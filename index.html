@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solid Start Date Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Solid Start Date Calculator</h1>
+    <p>Enter your child's date of birth to find out when to start solids (181 days after birth).</p>
+    <form id="dob-form">
+      <label for="dob">Child's Date of Birth:</label>
+      <input type="date" id="dob" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="result" class="hidden">
+      <h2>Recommended Solid Start Date:</h2>
+      <p id="solid-date"></p>
+      <p id="countdown"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
